@@ -34,6 +34,11 @@ sudo dpkg -i atom.deb
 rm atom.deb
 sudo apt-get install -y -f
 
+wget -O slack.deb https://downloads.slack-edge.com/linux_releases/slack-desktop-2.5.2-amd64.deb
+sudo dpkg -i slack.deb
+rm slack.deb
+sudo apt-get install -y -f
+
 sudo apt-get -y install terminator
 sudo apt-get install -y curl
 sudo apt-get install -y git
@@ -85,3 +90,20 @@ sudo apt-get install -y postgresql postgresql-contrib
 sudo -u postgres bash -c "psql -c \"CREATE ROLE $(whoami) WITH PASSWORD '$password' SUPERUSER CREATEDB CREATEROLE LOGIN;\""
 createdb "$(whoami)"
 
+echo "alias gst=\"git status -sb\"
+alias gcm=\"git commit -m\"
+alias gpom=\"git push origin master\"
+alias gpo=\"git push origin\"
+alias gAA=\"git add -A\"
+alias ga=\"git add\"
+alias gam=\"git add .\"
+alias gco=\"git checkout\"
+alias gcob=\"git checkout -b\"" >> ~/.bashrc
+
+echo ""
+echo "======================================"
+echo "              AWESOME!"
+echo "======================================"
+echo "Now close this terminal window and 
+open a new one. Enjoy!"
+echo "======================================"
