@@ -1,7 +1,7 @@
 echo "~~~~~~~~~~~~~~~"
 echo "INSTALL PARTY!"
 echo "~~~~~~~~~~~~~~~"
-echo "Any concerns or issues with this script? 
+echo "Any concerns or issues with this script?
 Contact Fizal Sarif, Isaac Kang, or Daniel Yochum on slack.
 "
 sleep 2
@@ -49,10 +49,12 @@ source ~/.bashrc
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-nvm -v 
+nvm -v
 nvm install stable
 nvm use stable
 
+echo "source ~/.profile" >> ~/.bash_profile
+source ~/.bash_profile
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io -o rvm.sh
 cat rvm.sh | bash -s stable --rails
@@ -60,6 +62,13 @@ rm rvm.sh
 echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc
 echo progress-bar >> ~/.curlrc
 gem install bundler
+
+
+
+
+
+
+
 
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 echo "GIT_PROMPT_ONLY_IN_REPO=1" >> ~/.bashrc
@@ -104,6 +113,6 @@ echo ""
 echo "======================================"
 echo "              AWESOME!"
 echo "======================================"
-echo "Now close this terminal window and 
+echo "Now close this terminal window and
 open a new one. Enjoy!"
 echo "======================================"
